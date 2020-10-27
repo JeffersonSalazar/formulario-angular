@@ -1,0 +1,47 @@
+<!-- Este codigo tiene la vista de la 2 seccion del formulario -->
+<section class="form-content">
+    <form [formGroup]="reactive_form">
+        <h4>Sign In</h4>
+
+        <h5>Pagina<span> 2</span> de 4</h5>
+
+        <!-- En esta parte del codigo tenemos 3 contenedores MAT de angular material
+             que se encargan de manejar el comportamiento de cada input 
+        -->
+        <mat-form-field class="content-inputs">
+            <mat-label>Lugar de recidencia</mat-label>
+            <input type="text" matInput formControlName="recidencia" required="" [class.is-valid]="validar_recidencia">
+        </mat-form-field>
+        <!-- Validacion del formulario -->
+        <small class="text-danger" *ngIf="validar_recidencia">Este campo es requerido</small>
+
+        <mat-form-field class="content-inputs">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input type="date" matInput formControlName="nacimiento" required="" [class.is-valid]="validar_nacimiento">
+        </mat-form-field>
+        <!-- Validacion del formulario -->
+        <small class="text-danger" *ngIf="validar_nacimiento">Este campo es requerido</small>
+    
+        <mat-form-field class="content-inputs">
+            <mat-label>Lugar de nacimiento</mat-label>
+            <input type="text" matInput formControlName="lugar" required="" [class.is-valid]="validar_lugar">
+        </mat-form-field>
+        <!-- Validacion del formulario -->
+        <small class="text-danger" *ngIf="validar_lugar">Este campo es requerido</small>
+    
+        <!-- Contenedor de los botonos de desplazamiento -->
+        <div class="content-btn">
+            <a [routerLink]="['/sect-one']" class="btn-link">Regresar</a>
+            <a [routerLink]="['/sect-three']" class="btn-style" mat-raised-button color="primary" (click)="form_data()">Continuar</a>
+        </div>
+        
+        <hr>
+
+        <!-- Contenedor de los iconos -->
+        <div class="content-redes">
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+    </form>
+</section>

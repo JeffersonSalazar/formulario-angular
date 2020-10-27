@@ -1,0 +1,149 @@
+// Reseteo general de los espaciados y margenes del navegador
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../src/assets/img/img1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+// Reseteo de los espaciados y margenes que genera Bootstrap
+h1 h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+// Tag padre de toda la seccion
+.form-content {
+    display: flex;
+    width: 60%; // Se Redujo el ancho para lograr el centrado con flex-box
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+    // Tag hijo de toda la seccion
+    form {
+        padding: 50px;
+        width: 400px;
+        background-color: white;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+        animation: move 1 .8s ease;
+        
+
+        @keyframes move {
+            0% {
+                transform: translateX(-500px);
+            }
+            100% {
+                transform: translateX( 0px);
+            }  
+        }
+
+        h4 {
+            text-align: center;
+            color: #3F51B5;
+            font-weight: 700;
+            font-size: 40px;  
+        }
+
+        h5 {
+            text-align: center;
+            text-decoration: underline;
+            color: rgba(0, 0, 0, .3);
+            letter-spacing: 0.2rem;
+            margin: 10px 0 20px;
+
+            span {
+                color: #3F51B5;
+                font-weight: 700;
+            }
+        }
+
+        // Contenedor de los inputs
+        .content-inputs {
+            width: 100%; // Damos a cada input el ancho maximo de su padre
+        }
+
+        // Contenedor de los botones
+        .content-btn {
+            text-align: center;
+            margin: 20px 0;
+
+            .btn-link {
+                color: rgba(0, 0, 0, 0.3);
+                transition: all .3s ease;
+
+                &:hover {
+                    color: rgba(0, 0, 0, .8);
+                }
+            }
+
+            .btn-style {
+                outline: none;
+                text-decoration: none;
+                color: white;
+                font-weight: 600;
+                width: 150px;   
+                margin-left: 20px;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+                transition: all .3s ease;
+                
+                &:hover {
+                    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+
+        hr {
+            margin: 30px 0;
+        }
+
+        // Contenedor de los iconos
+        .content-redes {
+            text-align: center;
+
+            a {
+                padding: 10px;
+
+                i {
+                    color: white;
+                    font-size: 18px;
+                    padding: 12px;
+                    border-radius: 50px;
+                    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .8);
+                }
+
+                .fa-envelope {
+                    background-color: rgba(195, 46, 46, 0.801);
+
+                    &:hover {
+                        color: rgb(195, 46, 46);
+                        background-color: white;
+                    }
+                }
+
+                .fa-linkedin {
+                    background-color: rgba(50, 138, 50, 0.801);
+
+                    &:hover {
+                        color:  rgb(50, 138, 50);
+                        background-color: white;
+                    }
+                }
+
+                .fa-github {
+                    background-color: rgba(88, 86, 86, 0.801);
+
+                    &:hover {
+                        color:   rgb(88, 86, 86);
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/* En esta hoja SCSS encontraras solamente el estilo  del contendor
+   encargado de los selectores del genero 
+   ya que este formulario comparte tags la mayoria de los estilos 
+   estan en la hoja de stilos principal styles.scss 
+*/
+
+.content-gender {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
